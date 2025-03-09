@@ -1,0 +1,50 @@
+/* app.css */
+:root {
+	--main-bg: #f8fafc;
+	--surface-bg: #ffffff;
+	--text-color: #1a202c;
+	--primary-color: #2563eb;
+	--secondary-color: #7c3aed;
+	--body-text-color: #1e293b;
+	--Accent-color: #ef4444;
+	--hover-color: #1d4ed8;
+	--soft-color: #e2e8f0;
+	/* --nav-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.dark {
+	--main-bg: #0f172a;
+	--surface-bg: #1e293b;
+	--text-color: #1a202c;
+	--primary-color: #818cf8;
+	--secondary-color: #a78bfa;
+	--body-text-color: #f1f5f9;
+	--Accent-color: #f97316;
+	--hover-color: #1d4ed8;
+	--soft-color: #334155;
+}
+
+body {
+	background: var(--main-bg);
+}
+
+/* 
+Stunning Color Palette 🎨
+Light Theme 🌞
+Role	Hex	Usage Example
+Primary	#2563EB	Headings, accents
+Secondary	#7C3AED	Buttons, highlights
+Background	#F8FAFC	Main background
+Surface	#FFFFFF	Cards, sections
+Text	#1E293B	Body text
+Accent	#EF4444	CTA buttons, warnings
+Soft	#E2E8F0	Borders, dividers
+Dark Theme 🌚
+Role	Hex	Usage Example
+Primary	#818CF8	Glowing accents
+Secondary	#A78BFA	Hover effects
+Background	#0F172A	Space-like background
+Surface	#1E293B	Cards, floating elements
+Text	#F1F5F9	Light text
+Accent	#F97316	Vibrant CTAs
+Soft	#334155	Subtle borders */

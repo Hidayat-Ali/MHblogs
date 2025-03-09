@@ -1,0 +1,1 @@
+<h1>this is individual page</h1>
