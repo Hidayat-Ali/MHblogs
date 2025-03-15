@@ -1,4 +1,5 @@
-<script>
+<script context="module">
+    export const prerender = true;
     export let data;
     let {post} =data;
 </script>
