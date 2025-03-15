@@ -62,7 +62,7 @@
           <div class="col-md-6 col-lg-4 blog-card">
             <div class="card h-100 border-0 shadow-hover">
               <div class="card-img-top overflow-hidden position-relative">
-                <img src={post.featured_image_url || 'static/blog-bg.jpeg'} class="img-fluid zoom-effect" alt={post.title.rendered}>
+                <img src={post.featured_image_url || '/blog-bg.jpeg'} class="img-fluid zoom-effect" alt={post.title.rendered}>
                 <div class="badge-overlay">
                   <span class="badge badge-title">Web Development</span>
                   <span class="badge badge-date">{new Date(post.date).toLocaleDateString()}</span>

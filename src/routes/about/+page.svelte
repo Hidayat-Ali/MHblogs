@@ -26,10 +26,10 @@
     <div class="container">
       <div class="greeting-content">
         <div class="profile-image">
-          <img src="static/abc.png" alt="Hidayat Ali" class="img-fluid rounded-circle shadow" />
+          <img src="/abc.png" alt="Hidayat Ali" class="img-fluid rounded-circle shadow" />
         </div>
         <div>
-          <img src="static/salam.png" alt="">
+          <img src="/salam.png" alt="">
           <h2 class="greeting-text">ٱلسَّلَامُ عَلَيْكُمْ</h2>
         </div>
         

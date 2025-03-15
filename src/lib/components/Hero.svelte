@@ -44,7 +44,7 @@
         <div class="hero-image-wrapper position-relative">
           <!-- Image -->
           <div class="hero-main-image mb-3">
-            <img src="static/abc.png" alt="John Doe" class="img-fluid rounded-circle shadow">
+            <img src="/abc.png" alt="John Doe" class="img-fluid rounded-circle shadow">
           </div>
           <div class="hero-image-bg"></div>
         </div>
