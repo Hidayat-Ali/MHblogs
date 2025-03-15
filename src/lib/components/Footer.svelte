@@ -2,7 +2,12 @@
   import { onMount } from 'svelte';
   
   let showBackToTop = false;
+ const email = "your-email@example.com";
 
+    // Function to handle the button click
+    function handleClick() {
+        window.location.href = `mailto:${email}`;
+    }
   onMount(() => {
     const handleScroll = () => {
       showBackToTop = window.scrollY > 500;
@@ -24,16 +29,22 @@
   };
 </script>
 <footer class="footer-section position-relative overflow-hidden  py-5">
-  <!-- Animated Elements -->
-  <div class="footer-shape"></div>
+
   
   <div class="container">
     <div class="row g-5">
       <!-- Brand Column -->
       <div class="col-lg-4">
         <div class="footer-brand">
-          <h2 class="text-white mb-3 hover-rotate-3d">HA</h2>
-          <div class="d-flex gap-3">
+          <h2 class="mb-3 hover-rotate-3d footer-text">HA</h2>
+          
+        </div>
+      </div>
+
+      <!-- Skills Progress -->
+      <div class="col-lg-4">
+        <div class="h4 footer-text">Quick Links</div>
+        <div class="d-flex gap-3 py-5">
             <a href="#" class="social-icon">
               <i class="fab fa-github fa-lg"></i>
             </a>
@@ -44,43 +55,28 @@
               <i class="fab fa-codepen fa-lg"></i>
             </a>
           </div>
-        </div>
       </div>
-
-      <!-- Skills Progress -->
-      <div class="col-lg-4">
-        <div class="skill-radial-progress">
-          <div class="radial-progress" data-progress="95">
-            <span class="progress-text">Design</span>
-          </div>
-          <div class="radial-progress" data-progress="85">
-            <span class="progress-text">Development</span>
-          </div>
-        </div>
+      <div class="back-to-top" class:show={showBackToTop}>
+        <a href="#" on:click|preventDefault={scrollToTop} class="text-white">
+          <i class="fas fa-arrow-up"></i>
+        </a>
       </div>
-<div class="back-to-top" class:show={showBackToTop}>
-  <a href="#" on:click|preventDefault={scrollToTop} class="text-white">
-    <i class="fas fa-arrow-up"></i>
-  </a>
-</div>
       <!-- Contact Form -->
-      <!-- <div class="col-lg-4">
-        <div class="contact-card hover-3d-transform">
-          <h5 class="text-white mb-4">Let's Connect</h5>
-          <form class="footer-form">
-            <input type="email" class="form-control bg-transparent mb-3" placeholder="Your Email">
-            <textarea class="form-control bg-transparent mb-3" rows="2" placeholder="Message"></textarea>
-            <button class="btn btn-outline-light w-100">Send Quantum Message</button>
-          </form>
+      <div class="col-lg-4">
+<button class="contact-button" on:click={handleClick}>
+        <span>Contact Me</span>
+        <div class="icon">
+            <!-- Email Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path fill="currentColor" d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"/>
+            </svg>
         </div>
-      </div> -->
-       <div class="col-lg-4">
-        <iframe
-scrolling="no"
-style="width:100%!important;height:220px;border:1px #ccc solid !important"
-src="https://buttondown.com/hidayat?as_embed=true"
-></iframe><br /><br />
-    </div>
+    </button>
+          
+        </div>
+ 
+     
     </div>
    
 
@@ -89,8 +85,7 @@ src="https://buttondown.com/hidayat?as_embed=true"
       <div class="col-12">
         <div class="copyright-text text-center">
           <p class="text-muted mb-0 hover-float">
-            © 2024 Hidayat Ali • Crafted with <span class="text-danger">♥</span> & <span class="text-primary">Coffee</span>
-          </p>
+            © 2024 Hidayat Ali • developed with <span class="text-danger">♥</span>
         </div>
       </div>
     </div>
@@ -105,32 +100,13 @@ src="https://buttondown.com/hidayat?as_embed=true"
 </footer>
 
 <style>
-/* .footer-section {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  --accent-color: #c44900;
-  background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
-} */
+
 .footer-section{
     background-color: var(--main-bg);
 }
-.footer-shape {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: rgba(37, 99, 235, 0.05);
-  border-radius: 50%;
-  top: -50px;
-  left: -50px;
-  animation: shape-float 25s infinite linear;
-}
 
-@keyframes shape-float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(50px, 50px) rotate(90deg); }
-  50% { transform: translate(-30px, 80px) rotate(180deg); }
-  75% { transform: translate(40px, -30px) rotate(270deg); }
-}
+
+
 
 .social-icon {
   width: 45px;
@@ -140,7 +116,7 @@ src="https://buttondown.com/hidayat?as_embed=true"
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--body-text-color);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -148,54 +124,9 @@ src="https://buttondown.com/hidayat?as_embed=true"
   background: var(--primary-color);
   transform: translateY(-5px) rotate(15deg);
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
-}
-
-.radial-progress {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  margin: 1rem;
-}
-
-.radial-progress::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.1);
-}
-
-.radial-progress::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 3px solid var(--primary-color);
-  border-top-color: transparent;
-  transform: rotate(calc(360deg * (var(--progress)/100)));
-  transition: transform 1s ease;
-}
-
-.progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
-  font-size: 0.9rem;
-  text-align: center;
 }
 
-.hover-3d-transform {
-  transition: transform 0.4s ease;
-  position: relative;
-}
-
-.hover-3d-transform:hover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateZ(20px);
-}
 
 .back-to-top {
   position: fixed;
@@ -203,7 +134,7 @@ src="https://buttondown.com/hidayat?as_embed=true"
   right: 30px;
   width: 40px;
   height: 40px;
-  background: var(--primary-color);
+  background: var(--secondary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -212,27 +143,63 @@ src="https://buttondown.com/hidayat?as_embed=true"
   transition: all 0.3s ease;
 }
 
-/* .back-to-top.show {
+.back-to-top.show {
   opacity: 1;
-} */
-
-.hover-float {
-  transition: transform 0.3s ease;
+}
+.footer-text{
+  color: var(--body-text-color);
 }
 
-.hover-float:hover {
-  transform: translateY(-3px);
-}
+.contact-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        background: var(--primary-color);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
 
-@media (max-width: 991px) {
-  .footer-shape {
-    display: none;
-  }
-  
-  .radial-progress {
-    width: 80px;
-    height: 80px;
-  }
-}
+    /* Button Hover Effect */
+    .contact-button:hover {
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    /* Button Active Effect */
+    .contact-button:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Button Icon */
+    .contact-button .icon {
+        margin-left: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Button Icon Animation on Hover */
+    .contact-button:hover .icon {
+        transform: translateX(5px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .contact-button {
+            padding: 12px 24px;
+            font-size: 16px;
+        }
+    }
+
 </style>
 

@@ -29,7 +29,7 @@
           <img src="static/abc.png" alt="Hidayat Ali" class="img-fluid rounded-circle shadow" />
         </div>
         <div>
-          <img src="static/salam.webp" alt="">
+          <img src="static/salam.png" alt="">
           <h2 class="greeting-text">ٱلسَّلَامُ عَلَيْكُمْ</h2>
         </div>
         

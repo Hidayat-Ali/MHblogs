@@ -129,7 +129,7 @@ let isOpen = false;
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="/blog">Blogs</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li> -->
       </ul>
 
       <button class="btn btn-link nav-link theme-btn" on:click={toggleTheme}>
@@ -218,6 +218,10 @@ let isOpen = false;
     .close-icon {
       font-size: 1.8rem;
       line-height: 1;
+      color: var(--body-text-color);
     }
+.menu-icon{
+      color: var(--body-text-color);
+}
   }
 </style>

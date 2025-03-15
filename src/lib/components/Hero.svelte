@@ -1,6 +1,6 @@
 <!-- Add this in head -->
 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 <section class="hero d-flex align-items-center position-relative overflow-hidden">
   <div class="container">
@@ -23,19 +23,20 @@
             </a>
             
             <!-- Social Links -->
-            <div class="social-links">
-              <a href="#" class="text-decoration-none mx-2 icon">
-                <i class="fab fa-linkedin fa-lg hover-effect"></i>
-              </a>
-              <a href="#" class="text-decoration-none mx-2 icon">
-                <i class="fab fa-github fa-lg hover-effect"></i>
-              </a>
-              <a href="#" class="text-decoration-none mx-2 icon">
-                <i class="fab fa-twitter fa-lg hover-effect"></i>
-              </a>
+           <div class="d-flex gap-3 py-5">
+            <a href="#" class="social-icon">
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-codepen fa-lg"></i>
+            </a>
+          </div>
             </div>
           </div>
-        </div>
+     
       </div>
 
       <!-- Image Section -->
@@ -82,10 +83,7 @@
   background-color: var(--Accent-color);
 }
 
-.icon, .fab {
-  border-radius: 50%;
-  color: var(--Accent-color);
-}
+
 
 .hero-main-image {
   position: relative;
@@ -100,7 +98,7 @@
 
 .download-cv {
   background-color: var(--secondary-color);
-  color: var(--body-text-color);
+  color: white
 }
 
 .hero-image-bg {
@@ -118,7 +116,24 @@
 .lead {
   color: var(--body-text-color);
 }
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--body-text-color);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
+.social-icon:hover {
+  background: var(--primary-color);
+  transform: translateY(-5px) rotate(15deg);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+  color: white;
+}
 .text-creative {
   color: var(--body-text-color);
 }
