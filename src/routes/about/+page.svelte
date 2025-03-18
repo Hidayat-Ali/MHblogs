@@ -62,7 +62,7 @@
 
 
   .about-page {
-    background: var(--bg-main);
+    background: var(--main-bg);
     min-height: 100vh;
     padding: 4rem 0;
   }

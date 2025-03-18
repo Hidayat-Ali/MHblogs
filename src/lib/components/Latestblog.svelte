@@ -117,7 +117,7 @@
   }
 
   .blog-section {
-    background-color: var(--bg-main);
+    background-color: var(--main-bg);
   }
 
   .blog-card {
