@@ -1,10 +1,3 @@
-<svelte:head>
-  <title>About Me - Hidayat Ali Mir</title>
-  <meta name="description" content={"Software Engineer Hidayat Ali"} />
-  <meta property="og:title" content={"About-Me Hidayat ali"} />
-  <meta property="og:description" content={"Hidayat ali mir Full stack developer expertise in C# PHP Python JavaScript"} />
-  
-</svelte:head>
 <section class="hero d-flex align-items-center position-relative overflow-hidden">
   <div class="container">
     <div class="row align-items-center">

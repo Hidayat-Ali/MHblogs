@@ -136,7 +136,7 @@ let isOpen = false;
         {#if isDarkMode}
           <span>☀️</span>
         {:else}
-          <span>🌙</span>
+          <span> 🌙 </span>
         {/if}
       </button>
     </div>

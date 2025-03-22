@@ -7,17 +7,17 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["abc.png","blog-bg.jpeg","favicon.png","git.svg","linkedin.svg","salam.png","salam.webp","twitter.svg"]),
+	assets: new Set(["abc.png","blog-bg.jpeg","favicon.ico","favicon.png","git.svg","linkedin.svg","salam.png","salam.webp","twitter.svg"]),
 	mimeTypes: {".png":"image/png",".jpeg":"image/jpeg",".svg":"image/svg+xml",".webp":"image/webp"},
 	_: {
-		client: {start:"_app/immutable/entry/start.CSz2GiIE.js",app:"_app/immutable/entry/app.BSCz24Kc.js",imports:["_app/immutable/entry/start.CSz2GiIE.js","_app/immutable/chunks/BeZN6c1m.js","_app/immutable/chunks/BACdDkjB.js","_app/immutable/chunks/B5GwWq68.js","_app/immutable/entry/app.BSCz24Kc.js","_app/immutable/chunks/BACdDkjB.js","_app/immutable/chunks/D_nXeGhm.js","_app/immutable/chunks/BGAgWMwB.js","_app/immutable/chunks/CbLfxgj4.js","_app/immutable/chunks/BaRU1dVR.js","_app/immutable/chunks/B5GwWq68.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.BUhYZ-PO.js",app:"_app/immutable/entry/app.Dvoxq0iM.js",imports:["_app/immutable/entry/start.BUhYZ-PO.js","_app/immutable/chunks/DKllDrca.js","_app/immutable/chunks/BACdDkjB.js","_app/immutable/chunks/B5GwWq68.js","_app/immutable/entry/app.Dvoxq0iM.js","_app/immutable/chunks/BACdDkjB.js","_app/immutable/chunks/D_nXeGhm.js","_app/immutable/chunks/BGAgWMwB.js","_app/immutable/chunks/CbLfxgj4.js","_app/immutable/chunks/BaRU1dVR.js","_app/immutable/chunks/B5GwWq68.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./chunks/0-Bnw_W1xK.js')),
-			__memo(() => import('./chunks/1-Bogs6SAl.js')),
-			__memo(() => import('./chunks/2-BlZ1ZUP4.js')),
+			__memo(() => import('./chunks/1-kBQmcMqs.js')),
+			__memo(() => import('./chunks/2-BeMWIt0k.js')),
 			__memo(() => import('./chunks/3-68A4R4wr.js')),
-			__memo(() => import('./chunks/4-B8upwwdi.js')),
-			__memo(() => import('./chunks/5-DgQvps2i.js')),
+			__memo(() => import('./chunks/4-CpteUWNK.js')),
+			__memo(() => import('./chunks/5-saz235O5.js')),
 			__memo(() => import('./chunks/6-DzGIQipV.js'))
 		],
 		routes: [
@@ -55,6 +55,13 @@ return {
 				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 6 },
 				endpoint: null
+			},
+			{
+				id: "/sitemap.xml",
+				pattern: /^\/sitemap\.xml\/?$/,
+				params: [],
+				page: null,
+				endpoint: __memo(() => import('./chunks/_server-ZvOEB0LA.js'))
 			}
 		],
 		prerendered_routes: new Set([]),

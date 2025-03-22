@@ -1,4 +1,4 @@
-import { g as getAllPosts } from './wordpress-BZVDexVv.js';
+import { g as getAllPosts } from './wordpress-UVGJd0qi.js';
 
 async function load() {
   try {
@@ -43,4 +43,4 @@ const stylesheets = ["_app/immutable/assets/4.DnVQ55pd.css"];
 const fonts = [];
 
 export { component, fonts, imports, index, _page_server as server, server_id, stylesheets };
-//# sourceMappingURL=4-B8upwwdi.js.map
+//# sourceMappingURL=4-CpteUWNK.js.map

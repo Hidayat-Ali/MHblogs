@@ -1376,18 +1376,15 @@ const options = {
 <title> Full Stack Dev| Hidayat's Portfolio</title>
 
 <head>
+	<link rel="icon" href="/favicon.ico" />
 	<meta name="author" content="Hidayat Ali Mir" />
 	<meta name="description"
 		content="Hidayat Ali Mir is a full-stack developer specializing in React, Node.js, and Docker. Explore my portfolio for projects, blogs, and more." />
 
-	<!-- Open Graph Tags (for social sharing) -->
-	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="Hidayat Ali Mir - Portfolio" />
-	<meta property="og:image" content="/abc.png" />
-	<link rel="stylesheet" href="src/css/app.css">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
 </head>
 ` + head + '\n\n<body data-sveltekit-preload-data="hover">\n	<div style="display: contents">' + body + "</div>\n</body>\n\n</html>",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
@@ -1461,7 +1458,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "bimwdw"
+  version_hash: "dx8gy9"
 };
 async function get_hooks() {
   let handle;

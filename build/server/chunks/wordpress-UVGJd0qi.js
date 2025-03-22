@@ -22,5 +22,5 @@ async function getPost(slug) {
   }
 }
 
-export { getPost as a, getAllPosts as g };
-//# sourceMappingURL=wordpress-BZVDexVv.js.map
+export { WORDPRESS_URL as W, getPost as a, getAllPosts as g };
+//# sourceMappingURL=wordpress-UVGJd0qi.js.map

@@ -1,4 +1,4 @@
-import { a as getPost } from './wordpress-BZVDexVv.js';
+import { a as getPost } from './wordpress-UVGJd0qi.js';
 
 let isLoading = true;
 async function load({ params }) {
@@ -29,4 +29,4 @@ const stylesheets = ["_app/immutable/assets/5.44d14pzk.css"];
 const fonts = [];
 
 export { component, fonts, imports, index, _page_server as server, server_id, stylesheets };
-//# sourceMappingURL=5-DgQvps2i.js.map
+//# sourceMappingURL=5-saz235O5.js.map
