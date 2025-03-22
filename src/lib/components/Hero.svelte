@@ -1,7 +1,10 @@
-<!-- Add this in head -->
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+<svelte:head>
+  <title>About Me - Hidayat Ali Mir</title>
+  <meta name="description" content={"Software Engineer Hidayat Ali"} />
+  <meta property="og:title" content={"About-Me Hidayat ali"} />
+  <meta property="og:description" content={"Hidayat ali mir Full stack developer expertise in C# PHP Python JavaScript"} />
+  
+</svelte:head>
 <section class="hero d-flex align-items-center position-relative overflow-hidden">
   <div class="container">
     <div class="row align-items-center">
@@ -24,14 +27,14 @@
             
             <!-- Social Links -->
            <div class="d-flex gap-3 py-5">
-            <a href="#" class="social-icon">
+            <a href="https://github.com/Hidayat-Ali" class="social-icon" aria-label="hidayat github">
               <i class="fab fa-github fa-lg"></i>
             </a>
-            <a href="#" class="social-icon">
+            <a href="https://www.linkedin.com/in/hidayat-ali-mir-7806271b7/" class="social-icon" aria-label="hidayat linkedin">
               <i class="fab fa-linkedin fa-lg"></i>
             </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-codepen fa-lg"></i>
+            <a href="https://x.com/HidayatAlimir1" class="social-icon" aria-label="hidayat twitter">
+              <i class="fab fa-twitter fa-lg"></i>
             </a>
           </div>
             </div>
@@ -44,7 +47,7 @@
         <div class="hero-image-wrapper position-relative">
           <!-- Image -->
           <div class="hero-main-image mb-3">
-            <img src="/abc.png" alt="John Doe" class="img-fluid rounded-circle shadow">
+            <img src="/abc.png" alt="Hidayat ali mir" class="img-fluid rounded-circle shadow" loading="lazy">
           </div>
           <div class="hero-image-bg"></div>
         </div>
@@ -145,15 +148,6 @@
   gap: 10px;
   margin-top: 20px; /* Space between image and badges */
   position: static; /* Remove absolute positioning */
-}
-
-.hover-effect {
-  transition: all 0.3s ease;
-}
-
-.hover-effect:hover {
-  transform: translateY(-3px);
-  color: var(--primary-color) !important;
 }
 
 @keyframes float {

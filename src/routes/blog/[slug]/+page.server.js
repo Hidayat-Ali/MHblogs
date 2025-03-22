@@ -1,18 +1,20 @@
 import { getPost } from '$lib/Api/wordpress';
-import { error } from '@sveltejs/kit';
 
 /**
  * @type {import('./$types').PageServerLoad}
  */
+let isLoading = true;
 export async function load({ params }) {
-	console.log('This is slug:', params.slug);
-
-	const post = await getPost(params.slug);
-
-	if (!post) {
-		console.error('Post not found for slug:', params.slug);
-		throw error(404, 'Post not found');
+	let post = {};
+	try {
+		post = await getPost(params.slug);
+		if (post) {
+			isLoading = false;
+		}
+	} catch (error) {
+		console.error(error);
+		isLoading = false;
 	}
 
-	return { post };
+	return { post, isLoading };
 }

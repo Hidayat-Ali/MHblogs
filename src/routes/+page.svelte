@@ -3,6 +3,12 @@
 
 import Latestblog from '$lib/components/Latestblog.svelte';
  </script>
+<svelte:head>
+ <meta name="description" content={"Software Engineer Hidayat Ali"} />
+  <meta property="og:title" content={"Hidayat Ali || Full Stack Dev"} />
+  
+  
+</svelte:head>
 
 <Hero/>
 <Latestblog/>

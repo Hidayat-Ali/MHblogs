@@ -14,6 +14,12 @@
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
   });
 </script>
+<svelte:head>
+  <meta name="description" content={"Software Engineer Hidayat Ali"} />
+  <meta property="og:title" content={"About-Me Hidayat ali"} />
+  <meta property="og:description" content={"Hidayat ali mir Full stack developer expertise in C# PHP Python JavaScript"} />
+  
+</svelte:head>
 
 <section class="about-page">
   <!-- Bismillah Header -->
@@ -26,10 +32,10 @@
     <div class="container">
       <div class="greeting-content">
         <div class="profile-image">
-          <img src="/abc.png" alt="Hidayat Ali" class="img-fluid rounded-circle shadow" />
+          <img src="/abc.png" alt="Hidayat Ali" class="img-fluid rounded-circle shadow" loading="lazy" alt-label="Hidayat ali Mir"/>
         </div>
         <div>
-          <img src="/salam.png" alt="">
+          <img src="/salam.png" alt="Hidayat Greetings">
           <h2 class="greeting-text">ٱلسَّلَامُ عَلَيْكُمْ</h2>
         </div>
         

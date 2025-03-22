@@ -2,7 +2,9 @@
     export let data;
     const { posts, error } = data;
 </script>
-
+<svelte:head>
+  <title> All Blogs||Hidayat Ali Mir </title>
+</svelte:head>
 <section class=" all-Blogs py-5 mt-2 ">
     <h1 class="headding1 text-center">All Blogs</h1>
 {#if error}
