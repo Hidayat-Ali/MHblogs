@@ -1,5 +1,5 @@
 import { d as define_property, s as safe_equals, g as get_descriptor, a as array_from, e as equals, r as run_all, i as is_array, b as index_of, c as decode_pathname, f as decode_params, n as normalize_path, h as disable_search, j as resolve, m as make_trackable, k as readable, w as writable } from './chunks/exports-_UAa12h4.js';
-import { r as render, H as HYDRATION_START, a as HYDRATION_ERROR, b as HYDRATION_END, p as push$1, s as setContext, c as pop$1 } from './chunks/index-BC1QlqKu.js';
+import { r as render, H as HYDRATION_START, a as HYDRATION_ERROR, b as HYDRATION_END, p as push$1, s as setContext, c as pop$1 } from './chunks/index-BZgSNx4l.js';
 
 const BROWSER = false;
 let base = "";
@@ -1376,8 +1376,20 @@ const options = {
 <title> Full Stack Dev| Hidayat's Portfolio</title>
 
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="` + assets2 + '/favicon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	' + head + '\n\n	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"\n		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">\n	<!-- <link rel="stylesheet" href="' + assets2 + '/app.css"> -->\n	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">\n\n\n</head>\n\n<body data-sveltekit-preload-data="hover">\n	<div style="display: contents">' + body + "</div>\n</body>\n\n</html>",
+	<meta name="author" content="Hidayat Ali Mir" />
+	<meta name="description"
+		content="Hidayat Ali Mir is a full-stack developer specializing in React, Node.js, and Docker. Explore my portfolio for projects, blogs, and more." />
+
+	<!-- Open Graph Tags (for social sharing) -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Hidayat Ali Mir - Portfolio" />
+	<meta property="og:image" content="/abc.png" />
+	<link rel="stylesheet" href="src/css/app.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+` + head + '\n\n<body data-sveltekit-preload-data="hover">\n	<div style="display: contents">' + body + "</div>\n</body>\n\n</html>",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -1449,7 +1461,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "3ea599"
+  version_hash: "bimwdw"
 };
 async function get_hooks() {
   let handle;
