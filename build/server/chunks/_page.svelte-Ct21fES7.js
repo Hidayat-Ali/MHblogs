@@ -1,0 +1,13 @@
+import { p as push, h as head, c as pop } from './index-BZgSNx4l.js';
+
+function _page($$payload, $$props) {
+  push();
+  head($$payload, ($$payload2) => {
+    $$payload2.out += `<meta name="description" content="Software Engineer Hidayat Ali" class="svelte-hv91sg"> <meta property="og:title" content="About-Me Hidayat ali" class="svelte-hv91sg"> <meta property="og:description" content="Hidayat ali mir Full stack developer expertise in C# PHP Python JavaScript" class="svelte-hv91sg">`;
+  });
+  $$payload.out += `<section class="about-page svelte-hv91sg"><div class="bismillah-header svelte-hv91sg"><h1 class="bismillah svelte-hv91sg">﷽</h1></div> <div class="greeting-section animate-on-scroll svelte-hv91sg"><div class="container svelte-hv91sg"><div class="greeting-content svelte-hv91sg"><div class="profile-image svelte-hv91sg"><img src="/abc.png" alt="Hidayat Ali" class="img-fluid rounded-circle shadow svelte-hv91sg" loading="lazy" alt-label="Hidayat ali Mir"></div> <div class="svelte-hv91sg"><div class="hand-container svelte-hv91sg" aria-label="Islamic greeting gesture"><h2 class="greeting-text svelte-hv91sg">ٱلسَّلَامُ عَلَيْكُمْ</h2></div></div></div></div> <div class="story-section svelte-hv91sg"><div class="container svelte-hv91sg"><div class="story-card animate-on-scroll svelte-hv91sg"><p class="lead svelte-hv91sg">In the name of Allah, the Most Gracious, the Most Merciful.</p> <p class="story-text svelte-hv91sg">My journey began in a small town where I first discovered my passion for technology. From building my first website in high school to developing complex applications, every step has been a testament to Allah's guidance and blessings. <span class="arabic-text svelte-hv91sg">الحمداللہ</span>, I’ve had the opportunity to work on projects that not only challenge me but also make a positive impact.</p> <p class="story-text svelte-hv91sg">I believe in the power of code to solve real-world problems. Whether it’s creating seamless user experiences or optimizing backend systems, I strive to deliver excellence in everything I do. Along the way, I’ve learned that success isn’t just about technical skills but also about perseverance, humility, and gratitude.</p> <p class="story-text svelte-hv91sg">Today, I’m proud to say that I’ve worked with clients from around the world, delivering solutions that exceed expectations. <span class="arabic-text svelte-hv91sg">الحمداللہ</span>, every project has been a stepping stone in my journey, and I’m excited to see where this path leads next.</p></div></div></div></div></section>`;
+  pop();
+}
+
+export { _page as default };
+//# sourceMappingURL=_page.svelte-Ct21fES7.js.map

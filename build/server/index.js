@@ -1376,6 +1376,8 @@ const options = {
 <title> Full Stack Dev| Hidayat's Portfolio</title>
 
 <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="/favicon.ico" />
 	<meta name="author" content="Hidayat Ali Mir" />
 	<meta name="description"
@@ -1458,7 +1460,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "dx8gy9"
+  version_hash: "1ua10pi"
 };
 async function get_hooks() {
   let handle;

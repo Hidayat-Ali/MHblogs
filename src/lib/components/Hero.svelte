@@ -218,5 +218,7 @@
   .text-creative {
     font-size: 1.4rem;
   }
+
 }
+
 </style>

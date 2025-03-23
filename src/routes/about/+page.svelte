@@ -35,7 +35,8 @@
           <img src="/abc.png" alt="Hidayat Ali" class="img-fluid rounded-circle shadow" loading="lazy" alt-label="Hidayat ali Mir"/>
         </div>
         <div>
-          <img src="/salam.png" alt="Hidayat Greetings">
+          <div class="hand-container" aria-label="Islamic greeting gesture">
+
           <h2 class="greeting-text">ٱلسَّلَامُ عَلَيْكُمْ</h2>
         </div>
         
@@ -174,4 +175,5 @@
       font-size: 1rem;
     }
   }
+  
 </style>
