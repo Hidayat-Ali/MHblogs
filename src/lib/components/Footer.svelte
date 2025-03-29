@@ -45,19 +45,20 @@
       <div class="col-lg-4">
         <div class="h4 footer-text">Quick Links</div>
         <div class="d-flex gap-3 py-5">
-            <a href="#" class="social-icon">
+       <a href="https://github.com/Hidayat-Ali" class="social-icon" aria-label="hidayat github">
               <i class="fab fa-github fa-lg"></i>
             </a>
-            <a href="#" class="social-icon">
+            <a href="https://www.linkedin.com/in/hidayat-ali-mir-7806271b7/" class="social-icon" aria-label="hidayat linkedin">
               <i class="fab fa-linkedin fa-lg"></i>
             </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-codepen fa-lg"></i>
+            <a href="https://x.com/HidayatAlimir1" class="social-icon" aria-label="hidayat twitter">
+              <i class="fab fa-twitter fa-lg"></i>
             </a>
           </div>
       </div>
       <div class="back-to-top" class:show={showBackToTop}>
-        <a href="#" on:click|preventDefault={scrollToTop} class="text-white">
+        <!-- svelte-ignore a11y_invalid_attribute -->
+        <a href="#" on:click|preventDefault={scrollToTop} class="text-white" aria-label="arrow-move">
           <i class="fas fa-arrow-up"></i>
         </a>
       </div>
@@ -93,7 +94,8 @@
 
   <!-- Back to Top -->
   <div class="back-to-top">
-    <a href="#" class="text-white">
+    <!-- svelte-ignore a11y_invalid_attribute -->
+    <a href="#" class="text-white" aria-label="arrow-move">
       <i class="fas fa-arrow-up"></i>
     </a>
   </div>
