@@ -1,5 +1,4 @@
-export const WORDPRESS_URL =
-	'https://public-api.wordpress.com/rest/v1.1/sites/hidayat734.wordpress.com';
+export const WORDPRESS_URL = import.meta.env.VITE_WORDPRESS_URL;
 
 export async function getAllPosts() {
 	try {
