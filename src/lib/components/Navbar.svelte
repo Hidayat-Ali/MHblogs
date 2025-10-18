@@ -2,28 +2,24 @@
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
 
-let isOpen = false;
+  let isOpen = false;
   let isDarkMode = false;
 
-  // Toggle mobile menu
   const toggleMenu = () => {
     isOpen = !isOpen;
     animateMenu();
   };
 
-  // Toggle theme with localStorage
   const toggleTheme = () => {
     isDarkMode = !isDarkMode;
     updateThemeClass();
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   };
 
-  // Update theme class on document element
   const updateThemeClass = () => {
     document.documentElement.classList.toggle('dark', isDarkMode);
   };
 
-  // Enhanced menu animation
   const animateMenu = () => {
     const mobileMenu = document.querySelector('.navbar-collapse');
     const navItems = document.querySelectorAll('.nav-item');
@@ -79,16 +75,13 @@ let isOpen = false;
     }
   };
 
-  // Initialize theme and animations
   onMount(() => {
-    // Load saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       isDarkMode = savedTheme === 'dark';
-      updateThemeClass(); // Initialize theme class on mount
+      updateThemeClass();
     }
 
-    // Page load animations
     gsap.from('.navbar-nav .nav-item', {
       opacity: 0,
       y: -20,
@@ -98,25 +91,18 @@ let isOpen = false;
       ease: 'power2.out',
     });
 
-    // Hover animations
     document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('mouseenter', () => gsap.to(link, { y: -5, duration: 0.2 }));
-      link.addEventListener('mouseleave', () => gsap.to(link, { y: 0, duration: 0.2 }));
+      link.addEventListener('mouseenter', () => gsap.to(link, { y: -3, scale: 1.05, duration: 0.2 }));
+      link.addEventListener('mouseleave', () => gsap.to(link, { y: 0, scale: 1, duration: 0.2 }));
     });
   });
 </script>
 
-<nav class="navbar navbar-expand-lg shadow-sm fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="/">(H) Blogs</a>
 
-    <button
-      class="navbar-toggler"
-      type="button"
-      on:click={toggleMenu}
-      aria-expanded={isOpen}
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" on:click={toggleMenu} aria-expanded={isOpen} aria-label="Toggle navigation">
       {#if isOpen}
         <span class="close-icon">×</span>
       {:else}
@@ -129,99 +115,112 @@ let isOpen = false;
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="/blog">Blogs</a></li>
-        <!-- <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
       </ul>
 
-      <button class="btn btn-link nav-link theme-btn" on:click={toggleTheme}>
-        {#if isDarkMode}
-          <span>☀️</span>
-        {:else}
-          <span> 🌙 </span>
-        {/if}
+      <button class="btn nav-link theme-btn" on:click={toggleTheme}>
+        {#if isDarkMode} ☀️ {:else} 🌙 {/if}
       </button>
     </div>
   </div>
 </nav>
 
 <style>
-  
-  .navbar {
-    background: var(--main-bg);
-    box-shadow: var(--nav-shadow);
-    z-index: 1000;
-  }
-
-  .navbar-collapse {
-    display: none;
-  }
-
-  .navbar-collapse.show {
-    display: block;
-  }
-
-  .nav-link {
-    position: relative;
-    padding: 0.5rem 1rem;
-    color: var(--body-text-color);
-    transition: all 0.3s ease;
-  }
-
-  .nav-link:hover {
-    color: var(--body-text-color);
-  }
-
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    transition: width 0.3s ease;
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  .theme-btn, .navbar-toggler {
-    outline: none !important;
-    box-shadow: none !important;
-    transition: transform 0.2s ease;
-  }
-
-  .theme-btn:hover {
-    transform: scale(1.1);
-  }
-
-  @media (max-width: 991.98px) {
-    .navbar-collapse {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--main-bg);
-      padding: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    :global(.dark) .navbar-collapse {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar-toggler {
-      font-size: 1.5rem;
-      padding: 0.5rem;
-    }
-
-    .close-icon {
-      font-size: 1.8rem;
-      line-height: 1;
-      color: var(--body-text-color);
-    }
-.menu-icon{
-      color: var(--body-text-color);
+/* Navbar Base */
+.navbar {
+  background: var(--main-bg);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
+.navbar .navbar-brand {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--Accent-color);
+  transition: transform 0.5s ease;
+}
+.navbar .navbar-brand:hover {
+  transform: scale(1.1) rotateY(10deg);
+}
+
+/* Navbar Links */
+.nav-link {
+  color: var(--body-text-color);
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--Accent-color);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Theme Button */
+.theme-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  color: var(--body-text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.theme-btn:hover {
+  transform: scale(1.2);
+  color: var(--Accent-color);
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  color: var(--body-text-color);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.navbar-toggler:hover {
+  transform: scale(1.1);
+}
+.close-icon, .menu-icon {
+  font-size: 1.8rem;
+}
+
+/* Mobile Menu */
+.navbar-collapse {
+  display: none;
+  transition: all 0.4s ease;
+}
+.navbar-collapse.show {
+  display: block;
+  background: var(--main-bg);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media(max-width:991.98px){
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
+  .nav-link { text-align: center; }
+  .theme-btn { margin: 1rem auto 0; display: block; }
+  .navbar-nav { flex-direction: column; gap: 0.5rem; }
+}
 </style>
