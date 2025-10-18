@@ -12,3 +12,4 @@ import Latestblog from '$lib/components/Latestblog.svelte';
 
 <Hero/>
 <Latestblog/>
+
