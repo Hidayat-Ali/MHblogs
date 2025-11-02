@@ -27,7 +27,14 @@
 body {
 	background: var(--main-bg);
 }
-
+html,
+body {
+	scroll-behavior: smooth;
+	padding-right: 0px;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
 /* 
 Stunning Color Palette 🎨
 Light Theme 🌞
